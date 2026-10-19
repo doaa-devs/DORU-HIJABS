@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>DORU HIJABS</title>
+  
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+ <body>
+   <div class="cart">
+    Cart: <span id="cart-count">0</span>
+
+    <div id="cart-panel" class="cart-panel">
+        <h3>Your Cart</h3>
+
+        <div id="cart-items"></div>
+
+        <p>
+            Total:
+            <span id="cart-total">0</span> SAR
+        </p>
+
+        <button id="checkout-btn" onclick="checkout()">
+    Checkout
+</button>
+    </div>
+
+    </div>
+
+   <header class="site-header">
+    <a href="#" class="logo">DORU</a>
+
+    <nav class="nav-links">
+        <a href="#">Home</a>
+        <a href="#shop">Shop</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <a href="#shop" class="header-button">Shop Collection</a>
+</header>
+
+    <main>
+        <section class="hero">
+
+            <div class="hero-text">
+                <p class="small-text">DORU COLLECTION</p>
+
+                <h2>Elegance in Every Day</h2>
+
+                <p>
+                    Discover comfort, simplicity,
+                    and timeless elegance.
+                </p>
+
+<a href="#shop" class="hero-button">Explore Collection</a>
+            </div>
+
+           <div class="hero-image">
+<img src="images/hijab.png" alt="DORU Hijab">
+</div>
+
+        </section>
+  <section id="shop" class="shop-section">
+
+    <p class="small-text">OUR COLLECTION</p>
+
+    <h2>Shop Our Hijabs</h2>
+
+    <p class="shop-description">
+        Discover soft fabrics, timeless colors, and everyday elegance.
+    </p>
+
+    <div class="products">
+
+        <div class="product-card">
+            <img src="images/hijab1.png" alt="DORU Hijab">
+
+            <h3>Soft Chiffon Hijab</h3>
+
+            <p>Elegant and lightweight chiffon hijab.</p>
+
+            <p class="price">₺250</p>
+
+           <button onclick="openProductModal(
+    'Soft Chiffon Hijab',
+    250,
+    'images/hijab1.png',
+    'A soft and lightweight chiffon hijab, perfect for elegant everyday looks.'
+)">
+    View Product
+</button>
+        </div>
+
+
+        <div class="product-card">
+            <img src="images/hijab1.png" alt="DORU Hijab">
+
+            <h3>Everyday Beige Hijab</h3>
+
+            <p>A soft beige hijab for every occasion.</p>
+
+            <p class="price">₺250</p>
+
+            <button onclick="openProductModal(
+    'Everyday Beige Hijab',
+    250,
+    'images/hijab1.png',
+    'A comfortable beige hijab designed for daily wear and easy styling.'
+)">
+    View Product
+</button>
+        </div>
+
+        <div class="product-card">
+            <img src="images/hijab1.png" alt="DORU Hijab">
+
+            <h3>Classic Cream Hijab</h3>
+
+            <p>A timeless cream color with a soft touch.</p>
+<p class="price">₺250</p>
+            <button onclick="openProductModal(
+    'Classic Cream Hijab',
+    250,
+    'images/hijab1.png',
+    'A timeless cream hijab that adds a soft and luxurious touch to every outfit.'
+)">
+    View Product
+</button>
+        </div>
+
+    </div>
+
+</section>
+    </main>
+<div id="product-modal" class="product-modal">
+    <div class="product-modal-content">
+        <button class="close-modal" onclick="closeProductModal()">
+            ×
+        </button>
+
+        <img id="modal-image" src="" alt="Product Image">
+
+        <h2 id="modal-name"></h2>
+
+        <p id="modal-price"></p>
+        <label for="product-quantity">
+    Quantity:
+</label>
+
+<input
+    type="number"
+    id="product-quantity"
+    value="1"
+    min="1"
+    max="10"
+>
+
+        <p id="modal-description">
+            Elegant and comfortable hijab, perfect for everyday wear.
+        </p>
+
+        <button id="modal-cart-btn">
+            Add to Cart
+        </button>
+    </div>
+</div>
+<section class="about-section" id="about">
+
+    <div class="about-content">
+
+        <div class="about-text">
+
+            <span class="section-label">ABOUT DOUR</span>
+
+            <h2>Elegance in Every Fold</h2>
+
+            <p>
+                At DOUR HIJABS, we believe that true elegance begins
+                with comfort. Our hijabs are designed for the modern
+                woman who values effortless beauty and timeless style.
+            </p>
+
+            <p>
+                From soft chiffon to carefully selected materials,
+                every piece is created to bring confidence, comfort,
+                and luxury into your everyday life.
+            </p>
+
+            <a href="#shop" class="about-btn">
+                Discover Our Collection
+            </a>
+
+        </div>
+
+        <div class="about-image">
+
+            <img src="images/Hijab2.png" alt="DOUR HIJABS collection">
+
+        </div>
+
+    </div>
+
+</section>
+    </section>
+
+<section class="contact-section" id="contact">
+
+    <div class="contact-content">
+
+        <div class="contact-text">
+            <p class="section-label">CONTACT DOUR</p>
+
+            <h2>We’d Love to Hear From You</h2>
+
+            <p>
+                Have a question about our collection or need help choosing
+                the perfect hijab? We’re here for you.
+            </p>
+
+            <div class="contact-info">
+                <p>Email: doruhijab@gmail.com</p>
+<p>Instagram: @doru.hijab</p>
+            </div>
+        </div>
+
+        <form class="contact-form">
+
+            <input type="text" placeholder="Your Name">
+
+            <input type="email" placeholder="Your Email">
+
+            <textarea placeholder="Your Message"></textarea>
+
+            <button type="submit">Send Message</button>
+
+        </form>
+
+    </div>
+
+</section>
+
+    <footer class="footer">
+
+    <div class="footer-content">
+
+        <div class="footer-brand">
+            <h2>DOUR HIJABS</h2>
+            <p>
+                Elegance in every fold.
+                Discover comfort, beauty, and timeless style.
+            </p>
+        </div>
+
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+            <a href="#home">Home</a>
+            <a href="#collection">Collection</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+        <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <p>Email: doruhijab@gmail.com</p>
+<p>Instagram: @doru.hijab</p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 DOUR HIJABS. All rights reserved.</p>
+    </div>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
